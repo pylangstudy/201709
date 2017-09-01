@@ -1,0 +1,31 @@
+import struct
+ByteOrders = {
+    '@':{'ByteOrder':'native', 'Size':'native', 'Alignment':'native'},
+    '=':{'ByteOrder':'native', 'Size':'standard', 'Alignment':'none'},
+    '<':{'ByteOrder':'Little Endian', 'Size':'standard', 'Alignment':'none'},
+    '>':{'ByteOrder':'Big Endian', 'Size':'standard', 'Alignment':'none'},
+    '!':{'ByteOrder':'Network(Big Endian)', 'Size':'standard', 'Alignment':'none'},
+}
+Types = {
+    'x':{'C': 'パディングバイト', 'Python': '値なし', 'Size': None},
+    'c':{'C': 'char', 'Python': '長さ 1 のバイト列', 'Size': 1},
+    'b':{'C': 'signed char', 'Python': '整数', 'Size': 1},
+    'B':{'C': 'unsigned char', 'Python': '整数', 'Size': 1},
+    '?':{'C': '_Bool', 'Python': '真偽値型(bool)', 'Size': 1},
+    'h':{'C': 'short', 'Python': '整数', 'Size': 2},
+    'H':{'C': 'unsigned short', 'Python': '整数', 'Size': 2},
+    'i':{'C': 'int', 'Python': '整数', 'Size': 4},
+    'I':{'C': 'unsigned int', 'Python': '整数', 'Size': 4},
+    'l':{'C': 'long', 'Python': '整数', 'Size': 4},
+    'L':{'C': 'unsigned long', 'Python': '整数', 'Size': 4},
+    'q':{'C': 'long long', 'Python': '整数', 'Size': 8},
+    'Q':{'C': 'unsigned long long', 'Python': '整数', 'Size': 8},
+    'n':{'C': 'ssize_t', 'Python': '整数', 'Size': None},
+    'N':{'C': 'size_t', 'Python': '整数', 'Size': None},
+    'e':{'C': '半精度型(符号 bit 、5 bit の指数部、 11 bit の精度)', 'Python': '浮動小数点数', 'Size': 2},
+    'f':{'C': 'float', 'Python': '浮動小数点数', 'Size': 4},
+    'd':{'C': 'double', 'Python': '浮動小数点数', 'Size': 8},
+    's':{'C': 'char[]', 'Python': 'bytes', 'Size': None},
+    'p':{'C': 'char[]', 'Python': 'bytes', 'Size': None},
+    'P':{'C': 'void*', 'Python': '整数', 'Size': None},
+}
