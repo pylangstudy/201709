@@ -1,0 +1,15 @@
+import datetime
+today = datetime.date.today()
+td = datetime.timedelta(days=1)
+print(f'today:{today}')
+print(f'timedelta:{td}')
+print('----- 加算（timedelta）-----')
+print(f'{today} + {td}: = {today + td}')
+print('----- 減算（timedelta）-----')
+print(f'{today} - {td}: = {today - td}')
+print('----- 比較 -----')
+print(f'{today} < {today + td}: = {today < (today + td)}')
+print(f'{today} > {today + td}: = {today > (today + td)}')
+print(f'{today} == {today + td}: = {today == (today + td)}')
+print(f'{today} != {today + td}: = {today != (today + td)}')
+
