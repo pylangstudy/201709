@@ -66,17 +66,17 @@ update([iterable-or-mapping])|要素が iterable からカウントされるか�
 
 4.py
 ```python
+import collections
 class Counter:
-    def __init__(self):
-        self.__values = {}
-    def count(self, name):
-        if name not in self.__values: self.__values[name] = 0
-        self.__values[name] += 1
+    def __init__(self): self.__value = 0
+    def count(self): self.__value += 1
     @property
-    def Values(self): return self.__values
+    def Value(self): return self.__value
 ```
 
-これで十分では？言語仕様のせいでカプセル化できないから必要性も感じないが。
+これで十分では？
+
+他、自分で考えたカウンタを`4_1.py`, `5.py`, `6.py`で実装してみた。
 
 ## 所感
 
